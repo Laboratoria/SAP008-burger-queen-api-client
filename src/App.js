@@ -1,9 +1,14 @@
+import React from 'react';
+import RoutesBQ from './RoutesBQ'
+
+
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello World!</h1>
+    <div className="app">
+      <RoutesBQ />
     </div>
   );
 }
 
 export default App;
+
