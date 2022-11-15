@@ -10,6 +10,7 @@ const RoutesBQ = () => {
             <Routes>
                 <Route path='/' element={<Login />} />
                 <Route exact path='/login' element={<Login />} />
+                <Route exact path='/register' element={<Register />}/>
             </Routes>
         </BrowserRouter>
     )

@@ -1,5 +1,7 @@
 import React from 'react';
 import './login.css';
+import { Link } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -18,7 +20,7 @@ const Login = () => {
                 </div>
 
              <button className='btn-login'>Login</button>
-             <button className='login-register'>Cadastre-se</button>
+             <Link to='/register'><button className='login-register'>Cadastre-se</button></Link>
 
             </div>
         </div>
