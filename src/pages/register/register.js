@@ -1,48 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './register.css';
-import { Link } from 'react-router-dom';
 
 const Register = () => {
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [name, setName] = useState('');
+
+
+
+
     return (
         <form id='Register'>
-
             <div className='register-modal'>
                 <h1>Cadastro</h1>
-
-                <div className='registerName'>
-                    <label>
-                        Nome e Sobrenome
-                    </label>
-                    <input
-                        type='text'
-                        placeholder='Digite seu nome e sobrenome'
-                        name='firstName'
-                        />
-                </div>
-
-                <div className='registerInputEmail'>
-                    <label>
-                        Email
-                    </label>
-                    <input
-                        type='email'
-                        placeholder='Digite seu email' />
-                </div>
-
-                <div className='registerInputPassword'>
-                    <label>
-                        Senha
-                        <input
-                            type='password'
-                            placeholder='Digite sua senha'
-                        />
-                    </label>
-                </div>
-
-                <button className='btn-register'>
-                    Cadastre-se
-                </button>
-
+                <label>Nome e sobrenome</label>
+                <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Nome'></input>
+                <label>Email</label>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
+                <label>Senha</label>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Senha' />
+                <select ></select>
+                <button className='btn-register'>Cadastrar-se</button>
             </div>
         </form>
     )

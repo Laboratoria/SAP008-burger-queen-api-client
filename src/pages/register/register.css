@@ -1,0 +1,48 @@
+body {
+    background-repeat: no-repeat;
+}
+#Register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+
+.register-modal {
+    width: 500px;
+    height: 650px;
+    background: rgba(36, 35, 41, 0.69);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.register-modal h1 {
+    margin: 10px;
+}
+
+.register-modal input {
+    background-color: #454444;
+    border: none;
+    height: 56px;
+    border-radius: 10px;
+    color: white;
+    width: 338px;
+    margin: 10px;
+}
+
+
+.btn-register {
+    width: 338px;
+    height: 54px;
+    background: linear-gradient(180deg, #F2811D 0%, #FA7426 73.96%, #E75F10 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 25px;
+    font-size: 20px;
+}

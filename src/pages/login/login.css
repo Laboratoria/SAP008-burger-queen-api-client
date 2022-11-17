@@ -21,8 +21,8 @@ html, body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
     
 }
 
@@ -33,9 +33,7 @@ html, body {
     border-radius: 10px;
     color: white;
     width: 338px;
-    display: flex;
-    
-
+    margin: 10px;
 }
 
 
@@ -47,6 +45,8 @@ html, body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin: 25px;
+    font-size: 20px;
 }
 
 .login-register {
@@ -57,7 +57,4 @@ html, body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    position: absolute;
-    left: 215px;
-    bottom: 16rem;
 }
