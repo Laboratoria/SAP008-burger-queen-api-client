@@ -1,31 +1,45 @@
 import React from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
-
-
+// import { MdEmail, MdLock } from "react-icons/md";
 
 const Login = () => {
     return (
         <form id='Login'>
 
-            <section className='login-modal'>
+            <div className='login-modal'>
                 <h1>Login</h1>
 
-                <label>
-                    Email
-                    <input type='email' placeholder='Digite seu email' name='email' />
-                </label>
+                <div className='loginInputEmail'>
+                    <label>
+                        Email
+                    </label>
+                    <input
+                        type='email'
+                        placeholder='Digite seu email' />
+                </div>
 
-                <label>
-                    Senha
-                    <input type='password' placeholder='Digite sua senha' name='password' />
-                </label>
+                <div className='loginInputPassword'>
+                    <label>
+                        Senha
+                        <input
+                            type='password'
+                            placeholder='Digite sua senha'
+                        />
+                    </label>
+                </div>
 
-                <button className='btn-login'>Login</button>
-                <Link to='/register'><button className='login-register'>Cadastre-se</button></Link>
+                <button className='btn-login'>
+                    Login
+                </button>
+                <Link to='/register'>
+                    <button className='login-register' type='submit'>
+                        Cadastre-se
+                    </button>
+                </Link>
 
-            </section >
-        </form >
+            </div>
+        </form>
     )
 }
 
