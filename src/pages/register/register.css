@@ -1,13 +1,9 @@
-body {
-    background-repeat: no-repeat;
-}
 #Register {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
 }
-
 
 .register-modal {
     width: 500px;
@@ -34,6 +30,14 @@ body {
     margin: 10px;
 }
 
+#options {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+}
 
 .btn-register {
     width: 338px;
@@ -45,4 +49,8 @@ body {
     cursor: pointer;
     margin: 25px;
     font-size: 20px;
+}
+
+::placeholder {
+    font-size: 18px;
 }

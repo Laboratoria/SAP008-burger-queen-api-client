@@ -13,13 +13,13 @@ const Register = () => {
         <form id='Register'>
             <div className='register-modal'>
                 <h1>Cadastro</h1>
-                <label>Nome e sobrenome</label>
-                <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Nome'></input>
-                <label>Email</label>
+                <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Nome e sobrenome'></input>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
-                <label>Senha</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Senha' />
-                <select ></select>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Nova senha' />
+                <select id='options'>
+                    <option value="service">Salão</option>
+                    <option value="kitchen">Cozinha</option>
+                </select>
                 <button className='btn-register'>Cadastrar-se</button>
             </div>
         </form>

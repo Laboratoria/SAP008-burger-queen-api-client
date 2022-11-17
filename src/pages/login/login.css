@@ -3,6 +3,7 @@ html, body {
     background-repeat: no-repeat;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -57,4 +58,9 @@ html, body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 20px;
+}
+
+::placeholder {
+    font-size: 18px;
 }

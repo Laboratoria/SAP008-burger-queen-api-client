@@ -13,12 +13,10 @@ const Login = () => {
         <form id='Login'>
             <div className='login-modal'>
                 <h1>Login</h1>
-                <label>Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
-                <label>Senha</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Senha' />
                 <button className='btn-login'>Login</button>
-                <Link to='/register'><button className='login-register' type='submit'>Cadastre-se</button>
+                <Link to='/register'><button className='login-register' type='submit'>Criar uma conta</button>
                 </Link>
             </div>
         </form>
