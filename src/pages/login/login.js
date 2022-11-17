@@ -7,7 +7,6 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
-
     return (
 
         <form id='Login'>

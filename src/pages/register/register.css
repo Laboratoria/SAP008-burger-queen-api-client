@@ -39,6 +39,11 @@
     background: white;
 }
 
+.selectOptions label {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .btn-register {
     width: 338px;
     height: 54px;
@@ -49,6 +54,7 @@
     cursor: pointer;
     margin: 25px;
     font-size: 20px;
+    margin-top: 70px;
 }
 
 ::placeholder {
