@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
 import './register.css';
+import { CreateUser } from '../../API/api';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+    const [role, setRole] = useState('service');
+    // const errorMessage = document.querySelector('#error');
 
+    const userRegister = (e) => {
+        e.preventDefault();
+        CreateUser(name, email, password, role)
+            .then((resp) => {
+                if (resp.status === 200) {
+                    <Link to='/login'></Link>
+                    return resp.json()
+                }
+            }).catch((erro) => console.log(erro));
+    }
 
     return (
         <form id='Register'>
@@ -13,15 +27,16 @@ const Register = () => {
                 <h1>Cadastro</h1>
                 <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Nome e sobrenome'></input>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Nova senha' />
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Nova senha' />
+                <p id='error'></p>
                 <div className='selectOptions'>
-                <label htmlFor='options'>Eu sou:</label>
-                <select id='options'>
-                    <option value="service">Atendente</option>
-                    <option value="kitchen">Chef</option>
-                </select>
+                    <label htmlFor='options'>Eu sou:</label>
+                    <select id='options'>
+                        <option value="service">Atendente</option>
+                        <option value="kitchen">Chef</option>
+                    </select>
                 </div>
-                <button className='btn-register'>Cadastrar-se</button>
+                <button className='btn-register' onClick={userRegister}>Cadastrar-se</button>
             </div>
         </form>
     )
