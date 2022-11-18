@@ -7,7 +7,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
-    const [role, setRole] = useState('service');
+    const [role, setRole] = useState('');
     // const errorMessage = document.querySelector('#error');
 
     const userRegister = (e) => {
@@ -31,7 +31,7 @@ const Register = () => {
                 <p id='error'></p>
                 <div className='selectOptions'>
                     <label htmlFor='options'>Eu sou:</label>
-                    <select id='options'>
+                    <select className ='options' onChange={(e) => setRole(e.target.value)}>
                         <option value="service">Atendente</option>
                         <option value="kitchen">Chef</option>
                     </select>
