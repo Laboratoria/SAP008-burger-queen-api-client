@@ -14,9 +14,8 @@ const Login = () => {
                 <h1>Login</h1>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='Senha' />
-                <button className='btn-login'>Login</button>
-                <Link to='/register'><button className='login-register' type='submit'>Criar uma conta</button>
-                </Link>
+                <Link to='/menu'><button className='btn-login'>Login</button></Link>
+                <Link to='/register'><button className='login-register' type='submit'>Criar uma conta</button></Link>
             </div>
         </form>
     )
