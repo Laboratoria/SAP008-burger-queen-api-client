@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './register.css';
 import { CreateUser } from '../../API/api';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
-    const [role, setRole] = useState('');
+    const [role, setRole] = useState('service');
+    const navigate = useNavigate();
     // const errorMessage = document.querySelector('#error');
 
     const userRegister = (e) => {
@@ -15,7 +16,7 @@ const Register = () => {
         CreateUser(name, email, password, role)
             .then((resp) => {
                 if (resp.status === 200) {
-                    <Link to='/login'></Link>
+                    navigate('/login');
                     return resp.json()
                 }
             }).catch((erro) => console.log(erro));
